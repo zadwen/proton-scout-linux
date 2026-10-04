@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Proton Scout</title><link rel="stylesheet" href="/style.css"></head>
+<body><aside>
+<a class="brand" href="/">◈ <span>PROTON SCOUT<small>LINUX GAME COMPANION</small></span></a>
+<div class="local"><i></i> Running on your PC</div>
+<div class="eyebrow">YOUR MACHINE</div><div id="hardware"><p>Detecting hardware…</p></div>
+<button id="rescan" class="secondary">↻ Rescan hardware & games</button>
+<div class="eyebrow spacing">INSTALLED COMPATIBILITY TOOLS</div><div id="protons" class="muted">Scanning Steam…</div>
+<footer><span>v1.0 · Local & read-only</span><button id="quit" class="textbtn">Quit app</button></footer>
+</aside><main>
+<header><div class="eyebrow">LESS GUESSWORK. MORE PLAY.</div><h1>Find your game’s<br><em>starting setup.</em></h1><p class="intro">Proton recommendations from community reports,<br>with your hardware in the picture.</p></header>
+<form id="search"><label class="sr" for="query">Search game name or Steam app ID</label><span>⌕</span><input id="query" placeholder="Search any game or Steam app ID…" autocomplete="off"><button>Search games ↗</button></form>
+<div class="toolbar"><button id="installed" class="textbtn active">Your Steam library</button><span id="gameCount" class="muted"></span></div>
+<div id="status" role="status" aria-live="polite"></div>
+<div class="workspace"><section id="games" aria-label="Games"></section><section id="detail" aria-label="Recommendation"><div class="empty"><div class="orb">◈</div><h2>Your next game, tuned with evidence.</h2><p>Select an installed game or search the Steam store.<br>See version comparisons, report dates, and launch options.</p><div class="steps"><span>01 · Pick a game</span><span>02 · Compare reports</span><span>03 · Test in Steam</span></div><small>Recommendations guide testing. They do not guarantee maximum FPS.</small></div></section></div>
+<section class="method"><strong>How Scout decides</strong><p>Recent PC reports carry more weight. Reports from the same GPU vendor count twice. Both successes and failures are included. Launch options need two recent successful reports for the recommended version and a matching GPU vendor.</p><a href="https://github.com/ValveSoftware/Proton#runtime-config-options" target="_blank" rel="noreferrer">Valve’s launch-option documentation ↗</a> <a href="https://www.protondb.com" target="_blank" rel="noreferrer">ProtonDB ↗</a></section>
+</main><input id="importFile" class="hidden" type="file" accept="application/json,.json"><script src="/app.js"></script></body></html>
