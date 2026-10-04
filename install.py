@@ -8,7 +8,7 @@ from pathlib import Path
 source = Path(__file__).resolve().parent
 target = Path.home() / '.local/share/proton-scout'
 target.mkdir(parents=True, exist_ok=True)
-for name in ('app.py', 'core.py', 'run.sh', 'README.md', 'LICENSE', 'NOTICE.md'):
+for name in ('app.py', 'core.py', 'run.sh', 'README.md', 'LICENSE', 'NOTICE.md', 'VALIDATION.md'):
     if source != target:
         shutil.copy2(source / name, target / name)
 if source != target:

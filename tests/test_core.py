@@ -71,7 +71,9 @@ class CoreTests(unittest.TestCase):
             self.assertEqual(safe_flags(s,HW),[])
     def test_flags_repeated_and_same_vendor(self):
         f='PROTON_NO_FSYNC=1 gamemoderun %command%'
-        a=analyze([report(key='a',notes=f),report(key='b',notes=f)],'123',HW,NOW)
+        rows=[report(key='a'),report(key='b')]
+        for r in rows:r['responses']['launchOptions']=f
+        a=analyze(rows,'123',HW,NOW)
         self.assertEqual(a['flags'],f);self.assertEqual(a['flagReports'],2)
         a=analyze([report(key='a',notes=f),report(key='b',notes=f,gpu='AMD Radeon')],'123',HW,NOW)
         self.assertEqual(a['flags'],'')
